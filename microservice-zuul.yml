@@ -3,7 +3,7 @@ server:
   
 spring:
   application:
-    name: microservice-router
+    name: microservice-zuul
 
 zuul:
   routes:
