@@ -10,6 +10,6 @@ zuul:
     cadastro:
       path: /api/cadastro/**
       url: http://localhost:9091/api/cadastro
-    cadastro:
+    auth:
       path: /api/auth/**
       url: http://localhost:9091/api/auth
