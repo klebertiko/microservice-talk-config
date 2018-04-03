@@ -1,0 +1,15 @@
+server:
+  port: 9094
+  
+spring:
+  application:
+    name: microservice-router
+
+zuul:
+  routes:
+    cadastro:
+      path: /api/cadastro/**
+      url: http://localhost:9091/api/cadastro
+    cadastro:
+      path: /api/auth/**
+      url: http://localhost:9091/api/auth
