@@ -16,12 +16,25 @@ eureka:
       defaultZone: http://${eureka.instance.hostname}:${eureka.instance.port}/eureka/
   server:
     wait-time-in-ms-when-sync-empty: 3000
-
-zuul:
+    
+  zuul:
   routes:
-    cadastro:
-      path: /api/cadastro/**
-      url: http://localhost:9095/api/cadastro
-    auth:
-      path: /api/auth/**
-      url: http://localhost:9095/api/auth
+    auth-center:
+      path: /login/**
+      url: http://localhost:8081/
+      sensitiveHeaders: Cookie,Set-Cookie
+      stripPrefix: false
+    backend-service:
+      path: /backend/**
+      url: http://localhost:8082/
+
+shuaicj.security.jwt.secret: otherpeopledontknowit
+
+#zuul:
+#  routes:
+#   cadastro:
+#      path: /api/cadastro/**
+#      url: http://localhost:9095/api/cadastro
+#    auth:
+#      path: /api/auth/**
+#      url: http://localhost:9095/api/auth
