@@ -13,8 +13,7 @@ eureka:
   server:
     wait-time-in-ms-when-sync-empty: 3000
     
-    shuaicj:
-      security.jwt.secret:otherpeopledontknowit
+    shuaicj.security.jwt.secret: otherpeopledontknowit
 
 # security:
 #    oauth2:
